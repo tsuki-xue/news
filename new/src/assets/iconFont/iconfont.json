@@ -1,0 +1,16 @@
+{
+  "id": "4853501",
+  "name": "后台模板",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "25076961",
+      "name": "首页",
+      "font_class": "B--copy-copy",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    }
+  ]
+}
