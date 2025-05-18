@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.news.mapper.UserMapper">
+
+    <!-- 自定义按用户名查询    /*  SELECT * FROM user WHERE username = #{username} MySQL 语法-->
+    <select id="selectByUsername" resultType="com.news.domain.User">
+        SELECT * FROM USERS WHERE USERNAME = #{username}  /*达梦数据库语法*/
+    </select>
+
+</mapper>

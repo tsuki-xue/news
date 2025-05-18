@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.news.mapper.NewsMapper">
+    <!-- 可自定义SQL -->
+
+    <select id="getNewsByAdminList" resultType="com.news.vo.NewsVo">
+        select *
+        from news
+        where status = 1
+    </select>
+    <select id="getNewsByUserList" resultType="com.news.vo.NewsVo">
+        SELECT
+            n.*,
+            IF(c.user_name IS NULL, 0, 1) AS isCollect
+        FROM news n
+                 LEFT JOIN collect c
+                           ON n.id = c.news_id
+                               AND c.user_name = 'user'
+        WHERE n.status = 1;
+    </select>
+</mapper>
